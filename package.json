@@ -1,0 +1,16 @@
+{
+  "name": "solaux",
+  "version": "1.0.0",
+  "description": "Device code for solaux client monitor",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Sprague",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "mqtt": "^4.3.7"
+  },
+  "keywords": []
+}
