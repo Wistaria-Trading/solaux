@@ -39,3 +39,7 @@ Environment Variables:
 * *METRIC_KEY* - api key for posting to the solaux account in metric.im
 * *METRIC_URL* - defaults to metric.im. This can be customized for a standalone server installation
 * *LOCATION* - location address for the installation. When a client configuration console is introduced this should be an id with the actual location stored in the database.
+
+This release contains the linux version of MQTT-Explorer. This is a tool that helps
+monitor and visualize traffic from the MQTT devices on the local network. It's used
+for development and will not be part of the production release.
