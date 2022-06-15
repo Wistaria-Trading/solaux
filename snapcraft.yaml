@@ -1,0 +1,19 @@
+name: solaux
+version: git
+summary: Energy data monitor using metric.im
+description: |
+  Monitor energy sensors:-
+    $ solaux
+
+confinement: strict
+base: core20
+
+apps:
+  solaux:
+    command: bin/solaux
+
+parts:
+  solaux:
+    plugin: npm
+    npm-node-version: 16.15.1
+    source: .

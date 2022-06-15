@@ -2,9 +2,13 @@
   "name": "solaux",
   "version": "1.0.0",
   "description": "Device code for solaux client monitor",
-  "main": "index.mjs",
+  "main": "solaux.mjs",
   "scripts": {
+    "start": "node -r dotenv/config solaux.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "solaux": "solaux.mjs"
   },
   "author": "Michael Sprague",
   "license": "UNLICENSED",
