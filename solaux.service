@@ -1,0 +1,17 @@
+[Unit]
+Description=Solaux
+
+[Service]
+WorkingDirectory=/home/pi/solaux
+ExecStart=/usr/bin/npm start &
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=
+Environment=PORT=3000
+
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target

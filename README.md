@@ -32,14 +32,21 @@ The app is written as a nodejs process to be run as a systemctl module. It
 might be convenient to port to python before too long as the EmonPI ships
 with Python but not NodeJS.
 
+## Installation
+
+Clone solaux client to home directory. Install node and npm. Install solaux into sytemctl
 ```ssh
-node index.js
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+sudo apt install npm
+cd /etc/systemd/system/
+sudo ln -s /home/pi/solaux/solaux.service solaux.service
+sudo systemctl start solaux.service 
+sudo systemctl status solaux.service 
+sudo systemctl enable solaux.service 
 ```
+
 Environment Variables:
 * *METRIC_KEY* - api key for posting to the solaux account in metric.im
 * *METRIC_URL* - defaults to metric.im. This can be customized for a standalone server installation
 * *LOCATION* - location address for the installation. When a client configuration console is introduced this should be an id with the actual location stored in the database.
-
-This release contains the linux version of MQTT-Explorer. This is a tool that helps
-monitor and visualize traffic from the MQTT devices on the local network. It's used
-for development and will not be part of the production release.
