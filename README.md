@@ -48,8 +48,7 @@ sudo systemctl enable solaux.service
 
 Environment Variables:
 * *METRIC_KEY* - api key for posting to the solaux account in metric.im
-* *METRIC_URL* - defaults to metric.im. This can be customized for a standalone server installation
-* *LOCATION* - location address for the installation. When a client configuration console is introduced this should be an id with the actual location stored in the database.
+* *SOLAUX_ID* - Account Id registered for this device. The account id is defined in the solaux console and identifies the location and owner.
 
 It's helpful to simply run the solaux node app before starting the service. This way the results show up in the console directly. Once it's running, kill it and start the backgroun service so you can log out.
 ```
